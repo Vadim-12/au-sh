@@ -9,13 +9,13 @@ const initialState: AdminState = {
 	isLoginned: false
 }
 
-export const fetchAdmins = createAsyncThunk({
-	'admin/fetchAdmins',
-	async () => {
-		const data = await axios.get(API_URL)
-			.then(res => res.data)
-	}
-})
+// export const fetchAdmins = createAsyncThunk({
+// 	'admin/fetchAdmins',
+// 	async () => {
+// 		const data = await axios.get(API_URL)
+// 			.then(res => res.data)
+// 	}
+// })
 
 const adminSlice = createSlice({
 	name: 'admin',

@@ -10,12 +10,12 @@ const MobileMenu = () => {
           menuLinks.map(link => 
             (
               link.inMenu && (
-              <>
-                <Link href={link.href} key={link.id}>
+              <div key={link.id}>
+                <Link href={link.href}>
                   {link.name}
                 </Link>
                 <div className="menu_line"></div>
-              </>
+              </div>
               )
             )
           )
