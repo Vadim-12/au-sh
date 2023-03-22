@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="../img/icon.png" type="image/png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <title>AUTOVOLT - доставка электромобилей с аукционов Японии</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <a href="#" class="menu-btn" id="blink"><span></span></a>
+        <div class="menu-window">
+          <div class="menu_container">
+            <div class="menu_info">
+              <div class="menu_info_1">
+                <span>Сыктывкар, ул. Индустриальная, 20/12 <br><a href="#">схема проезда</a></span>
+              </div>
+              <div class="menu_info_line"></div>
+              <div class="menu_info_2">
+                <span>Режим работы:<br>ПН-ПТ с 08:00 до 18:00</span>
+              </div>
+              <div class="menu_info_line"></div>
+              <div class="menu_info_3">
+                <div class="menu_info_3_1">
+                  тел.: <a href="tel:+7 (9965) 891-596">+7 996 589-15-96</a>
+                </div>
+                <div class="menu_info_3_2">
+                  <div class="menu_info_3_2_content">
+                    <img src="../img/img2.png" alt="tel">
+                    <a href="#">Перезвоните мне</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="menu">
+              <div class="menu_line"></div>
+              <a href="index.html"><li>Главная</li></a>
+              <div class="menu_line"></div>
+              <a href="#"><li>О компании</li></a>
+              <div class="menu_line"></div>
+              <a href="#"><li>Подбор авто</li></a>
+              <div class="menu_line"></div>
+              <a href="#"><li>Оплата и доставка</li></a>
+              <div class="menu_line"></div>
+              <a href="#"><li>Партнеры</li></a>
+              <div class="menu_line"></div>
+              <a href="#"><li>Контакты</li></a>
+              <div class="menu_line"></div>
+            </ul>
+          </div>
+        </div>
+
+        <header>
+            <img class="up_bookmark" src="../img/img1.png" alt="up_bookmark">
+            <div class="header_1">
+                <div class="container">
+                    <a href="index.html" class="logo_link"><img class="logo" src="../img/logo.png" alt="logo"></a>
+                    <div class="header_1_1">
+                        Сыктывкар, ул. Индустриальная, 20/12<br>
+                        <a href="#" class="underlined">схема проезда</a>
+                    </div>
+                    <div class="header_1_2">
+                        Режим работы:<br>
+                        ПН-ПТ с 08:00 до 20:00
+                    </div>
+                    <div class="header_1_3">
+                        <div class="header_1_3_1">тел.: <a href="tel:+7 (9965) 891-596">+7 996 589-15-96</a></div>
+                        <div class="header_1_3_2">
+                            <img src="../img/img2.png" alt="phone">
+                            <a href="#" class="underlined">Перезвоните мне</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border_line"></div>
+            <div class="header_2">
+                <div class="container">                    
+                    <nav class="menu_desktop">
+                        <a href="index.html" class="link"><span>Главная</span></a>
+                        <a href="#" class="link"><span>О компании</span></a>
+                        <a href="#" class="cur link"><span>Подбор авто</span></a>
+                        <a href="#" class="link"><span>Оплата и доставка</span></a>
+                        <a href="#" class="link"><span>Партнеры</span></a>
+                        <a href="#" class="link"><span>Контакты</span></a>
+                    </nav>
+                    <div class="content">
+                        <div class="header_2_2">
+                            <form action="/">
+                                <input type="search" placeholder="Поиск">
+                            </form>
+                            <a href="#" class="underlined header_basket">Корзина</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border_line"></div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h2>Подбор авто</h2>
+                <div class="main_inner">
+                    <div class="filters_box">
+                          <div class="filters_block">
+                            <div class="filters_content">
+                                  <form name="filters" action="/">
+                                    <div class="form_item">
+                                          <label class="form_label">Марка автомобиля</label>
+                                          <div class="form_item_multi" filter_num="1">
+                                            <span class="form_item_multi_text">Выберите...</span>
+                                            <span class="vertical_line_in_form"></span>
+                                            <span class="form_item_btn">
+                                                  <img src="../img/arrow_bottom.png" alt="arrow_mark" class="arrow_mark" arrow_num="1">
+                                            </span>
+                                          </div>
+                                          <div class="item_multi" multi_num="1" style="display: none;">
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="1"><label for="1">Honda</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="2"><label for="2">Toyota</label>
+                                              </div>
+                                          </div>
+                                    </div>
+                                    <div class="form_item">
+                                          <label class="form_label">Тип двигателя</label>
+                                          <div class="form_item_multi" filter_num="2">
+                                            <span class="form_item_multi_text">Выберите...</span>
+                                            <span class="vertical_line_in_form"></span>
+                                            <span class="form_item_btn">
+                                                <img src="../img/arrow_bottom.png" alt="arrow_mark" class="arrow_mark" arrow_num="2">
+                                            </span>
+                                          </div>
+                                          <div class="item_multi" multi_num="2" style="display: none;">
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="3"><label for="3">Электрический</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="4"><label for="4">Бензиновый</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="5"><label for="5">Дизельный</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="6"><label for="6">Гибрид</label>
+                                              </div>
+                                          </div>
+                                    </div>
+                                    <div class="form_item">
+                                          <label class="form_label">Тип привода</label>
+                                          <div class="form_item_multi" filter_num="3">
+                                            <span class="form_item_multi_text">Выберите...</span>
+                                            <span class="vertical_line_in_form"></span>
+                                            <span class="form_item_btn">
+                                                  <img src="../img/arrow_bottom.png" alt="arrow_mark" class="arrow_mark" arrow_num="3">
+                                            </span>
+                                          </div>
+                                          <div class="item_multi" multi_num="3" style="display: none;">
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="7"><label for="7">Полный</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="8"><label for="8">Передний</label>
+                                              </div>
+                                              <div class="item_multi_one">
+                                                  <input type="checkbox" class="item_multi_one" id="9"><label for="9">Задний</label>
+                                              </div>
+                                          </div>
+                                    </div>
+                                    <div class="form_item">
+                                          <label class="form_label">Цена до: <span class="cur-value">25000000</span> руб</label>
+                                          <div class="minmax-values">
+                                              <span class="min-value">0</span>
+                                              <span class="max-value">50000000</span>
+                                          </div>
+                                          <input type="range" min="0" max="50000000" step="100000" value="25000000">
+                                    </div>
+                                    <div class="form_btns">
+                                          <button type="submit" class="btn_show">
+                                            Показать
+                                          </button>
+                                          <button type="reset" class="btn_clear">
+                                            Сбросить фильтр
+                                          </button>
+                                    </div>
+                                  </form>
+                            </div>
+                          </div>
+                    </div>
+                      <div class="goods_block">
+                          <h3>Результат поиска</h3>
+                          <div class="cards">
+                              <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                   <div class="box_1">
+                                       <div class="content">
+                                           <h3>
+                                               <a href="car_info.html">HONDA VEZEL</a>
+                                           </h3>
+                                           <table>
+                                               <tr>
+                                                   <th>Двигатель</th>
+                                                   <th>Цена млн.р.</th>
+                                                   <th>V л.</th>
+                                                   <th>P л.с.</th>
+                                                   <th>WD</th>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Бензин</td>
+                                                   <td class="bg">1,2-1,7</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,4-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>131</td>
+                                                   <td>4</td>
+                                               </tr>
+                                               <tr>
+                                                   <td rowspan="2" class="bg" height="50">Гибрид</td>
+                                                   <td class="bg">1,1-1,8</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>2</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="bg">1,3-1,9</td>
+                                                   <td>1,5</td>
+                                                   <td>132</td>
+                                                   <td>4</td>
+                                               </tr>
+                                           </table>
+                                       </div>
+                                   </div>
+                                   <div class="box_2">
+                                       <div class="box_2_header">
+                                           <h4>
+                                               <a href="car_info.html" class="underlined">2018-2019</a>
+                                           </h4>
+                                           <img src="../img/logo_in_card.png" alt="logo_in_card">
+                                    </div>
+                                    <a href="car_info.html" class="link_img">
+                                        <img src="../img/car_in_card.png" alt="car_in_card" class="car_in_card">
+                                    </a>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div class="pager-block">
+                              <button class="pager-more">Показать больше</button>
+                              <div class="pager">
+                                  <div class="pagers">
+                                      <span class="pager__link pager__link_active">1</span>
+                                      <a href="#" class="pager__link">2</a>
+                                  </div>
+                                  <a href="#" class="next"><img src="../img/pager_next.png"></a>
+                                  <a href="#" class="last"><img src="../img/pager_next.png"><div class="last_vertline"></div></a>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="block_border_line"></div>
+            <div class="container">
+                <div class="box">
+                    <h2>ДОСТАВКА ЭЛЕКТРОМОБИЛЕЙ С АУКЦИОНОВ ЯПОНИИ</h2>
+                    <div class="block_border_line"></div>
+                    <div class="content">
+                        <div class="chapter_one cur_chapter">
+                            <a href="#" class="title">Главная</a>
+                            <div class="block_border_line"></div>
+                            <a href="#" class="subtitle">НОВИНКИ</a>
+                            <a href="#" class="subtitle">ПРЕИМУЩЕСТВА</a>
+                            <a href="#" class="subtitle">ЗАЯВКА</a>
+                            <a href="#" class="subtitle">СДЕЛКА</a>
+                            <a href="#" class="subtitle">ПРОЦЕСС ПОСТАВКИ</a>
+                            <a href="#" class="subtitle">НАШЕ МЕСТОПОЛОЖЕНИЕ</a>
+                            <a href="#" class="subtitle">КАРТА САЙТА</a>
+                        </div>
+                        <div class="chapter_one">
+                            <a href="#" class="title">О нас</a>
+                            <div class="block_border_line"></div>
+                            <a href="#" class="subtitle">ИСТОРИЯ</a>
+                            <a href="#" class="subtitle">МИССИЯ</a>
+                            <a href="#" class="subtitle">ПРИНЦИПЫ</a>
+                            <a href="#" class="subtitle">ВИДЕО</a>
+                            <a href="#" class="subtitle">НАГРАДЫ</a>
+                            <a href="#" class="subtitle">ОТЗЫВЫ</a>
+                        </div>
+                        <div class="chapter_one">
+                            <a href="#" class="title">Подбор авто</a>
+                            <div class="block_border_line"></div>
+                            <a href="#" class="subtitle">НАШИ ДЕЙСТВИЯ</a>
+                            <a href="#" class="subtitle">МОДЕЛИ</a>
+                            <a href="#" class="subtitle">ХАРАКТЕРИСТИКИ</a>
+                            <a href="#" class="subtitle">НАША ПОМОЩЬ</a>
+                            <a href="#" class="subtitle">СОВЕТЫ</a>
+                        </div>
+                        <div class="chapter_one">
+                            <a href="#" class="title">Оплата и доставка</a>
+                            <div class="block_border_line"></div>
+                            <a href="#" class="subtitle">СУММЫ И СРОКИ</a>
+                            <a href="#" class="subtitle">ГАРАНТИИ</a>
+                            <a href="#" class="subtitle">ВАША ВЫГОДА</a>
+                            <a href="#" class="subtitle">ЮРИДИЧЕСКАЯ ЧИСТОТА</a>
+                        </div>
+                        <div class="chapter_one">
+                            <a href="#" class="title">Партнеры</a>
+                            <div class="block_border_line"></div>
+                            <a href="#" class="subtitle">ТОРГОВЫЕ ПЛОЩАДКИ</a>
+                            <a href="#" class="subtitle">ПЕРЕВОЗЧИКИ</a>
+                            <a href="#" class="subtitle">СЕРВИС</a>
+                            <a href="#" class="subtitle">РЕМОНТ</a>
+                            <a href="#" class="subtitle">ЧИП-ТЮНИНГ</a>
+                        </div>
+                        <div class="chapter_one">
+                            <a href="#" class="title">Контакты</a>
+                            <div class="block_border_line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/slick.min.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
