@@ -1,7 +1,5 @@
-import { AdminState, SetIsLoginned } from "@/types/admin"
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import axios from "axios"
-import { API_URL } from "../static"
+import { AdminState, SetIsLoginned, SetLogin, SetPassword } from "@/types/admin"
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 const initialState: AdminState = {
 	login: '',
@@ -9,23 +7,21 @@ const initialState: AdminState = {
 	isLoginned: false
 }
 
-// export const fetchAdmins = createAsyncThunk({
-// 	'admin/fetchAdmins',
-// 	async () => {
-// 		const data = await axios.get(API_URL)
-// 			.then(res => res.data)
-// 	}
-// })
-
 const adminSlice = createSlice({
 	name: 'admin',
 	initialState,
 	reducers: {
-		setIsLoginned: (state: AdminState, action: PayloadAction<SetIsLoginned>) => {
+		setAdminIsLoginned: (state: AdminState, action: PayloadAction<SetIsLoginned>) => {
 			state.isLoginned = action.payload.isLoginned
 		},
+		setAdminLogin: (state: AdminState, action: PayloadAction<SetLogin>) => {
+			state.login = action.payload.login
+		},
+		setAdminPassword: (state: AdminState, action: PayloadAction<SetPassword>) => {
+			state.password = action.payload.password
+		}
 	}
 })
 
-export const { setIsLoginned } = adminSlice.actions
+export const { setAdminIsLoginned, setAdminLogin, setAdminPassword } = adminSlice.actions
 export default adminSlice

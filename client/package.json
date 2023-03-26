@@ -16,8 +16,6 @@
     "@types/react-dom": "18.0.11",
     "@types/react-redux": "^7.1.25",
     "2gis-maps": "^3.7.3",
-    "axios": "^1.3.4",
-    "jotai": "^2.0.3",
     "jquery": "^3.6.4",
     "next": "13.2.3",
     "node-sass": "^7.0.3",
