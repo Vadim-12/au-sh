@@ -1,7 +1,15 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/admin": "pages/admin.js"
+  "/about": "pages/about.html",
+  "/404": "pages/404.html",
+  "/cart": "pages/cart.html",
+  "/admin": "pages/admin.html",
+  "/": "pages/index.html",
+  "/partners": "pages/partners.html",
+  "/contacts": "pages/contacts.html",
+  "/payment": "pages/payment.html",
+  "/select/[id]": "pages/select/[id].html",
+  "/select": "pages/select.html",
+  "/_error": "pages/_error.js"
 }
