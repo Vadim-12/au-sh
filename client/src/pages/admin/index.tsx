@@ -12,12 +12,30 @@ const Admin = () => {
 	const [admins, setAdmins] = useState<IAdmin[]>([])
 	
 	const dispatch = useAppDispatch()
-	const admin: AdminState = useAppSelector(state => state.admin)
+	let admin: AdminState = useAppSelector(state => state.admin)
 	const { data } = adminApi.useGetAllAdminsQuery(null)
 
 	useEffect(() => {
 		const admins = data?.length ? data : []
 		setAdmins(admins)
+	}, [data])
+
+	useEffect(() => {
+		let adminFromLS = localStorage.getItem('admin')
+
+		if (adminFromLS) {
+			const ans: AdminState = JSON.parse(adminFromLS)
+
+			dispatch(setAdminIsLoginned({
+				isLoginned: ans.isLoginned
+			}))
+			dispatch(setAdminLogin({
+				login: ans.login
+			}))
+			dispatch(setAdminPassword({
+				password: ans.password
+			}))
+		}
 	}, [])
 
 	function handleLoginChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -29,16 +47,22 @@ const Admin = () => {
 	function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault()
 		
-		const admin = admins.find(admin => admin.login === login)
-		console.log(admin)
+		const fAdmin = admins.find(admin => admin.login === login)
+		//console.log(admin)
 
-		if (!admin) {
-			setInputError('Администратора с таким логином не найдено.')
+		if (!fAdmin) {
+			setInputError('администратора с таким логином не найдено.')
 			return
 		}
-		if (admin.password !== password) {
-			setInputError('Неверный пароль.')
+
+		if (fAdmin.password !== password) {
+			setInputError('неверный пароль.')
 			return
+		}
+
+		const admin: AdminState = {
+			...fAdmin,
+			isLoginned: true
 		}
 
 		dispatch(setAdminIsLoginned({
@@ -50,6 +74,7 @@ const Admin = () => {
 		dispatch(setAdminPassword({
 			password
 		}))
+		localStorage.setItem('admin', JSON.stringify(admin))
 		
 		setLogin('')
 		setPassword('')
@@ -60,6 +85,11 @@ const Admin = () => {
 		<AdminLayout>
 			<div className="container">
 				<h1>Панель администратора</h1>
+					{admins.length}<br/>
+					Авторизован: {String(admin.isLoginned)}<br/>
+					Логин: {admin.login}<br/>
+					Пароль: {admin.password}
+
 				{
 						!admin.isLoginned
 					?
@@ -81,7 +111,7 @@ const Admin = () => {
 						<p>Вы успешно авторизовались!</p>
 				}
 				{
-					inputError && <div>Ошибка входа: {inputError}</div>
+					inputError && <div className='auth-error'>Ошибка входа: {inputError}</div>
 				}
 			</div>
 		</AdminLayout>
