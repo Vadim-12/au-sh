@@ -21,6 +21,7 @@ const Admin = () => {
 	}, [data])
 
 	useEffect(() => {
+		/*
 		let adminFromLS = localStorage.getItem('admin')
 
 		if (adminFromLS) {
@@ -36,6 +37,7 @@ const Admin = () => {
 				password: ans.password
 			}))
 		}
+		*/
 	}, [])
 
 	function handleLoginChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -74,7 +76,7 @@ const Admin = () => {
 		dispatch(setAdminPassword({
 			password
 		}))
-		localStorage.setItem('admin', JSON.stringify(admin))
+		//localStorage.setItem('admin', JSON.stringify(admin))
 		
 		setLogin('')
 		setPassword('')
