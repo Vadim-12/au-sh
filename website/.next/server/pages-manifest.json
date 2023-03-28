@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html",
   "/about": "pages/about.html",
@@ -8,8 +9,7 @@
   "/contacts": "pages/contacts.html",
   "/": "pages/index.html",
   "/partners": "pages/partners.html",
-  "/select/[id]": "pages/select/[id].html",
   "/payment": "pages/payment.html",
-  "/select": "pages/select.html",
-  "/_error": "pages/_error.js"
+  "/select/[id]": "pages/select/[id].html",
+  "/select": "pages/select.html"
 }
