@@ -130,6 +130,16 @@ body {
   margin-top: 10px;
   font-size: 1.2em;
 }
+.admin-link {
+  width: 50px;
+  height: 55px;
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+  }
+}
 .container {
   width: 82%;
   height: 100%;
@@ -1336,6 +1346,10 @@ footer .subtitle {
   }
 }
 @media (max-width: 1100px) {
+  .admin-link {
+    top: 30px;
+    left: 400px;
+  }
   .menu-btn {
     display: block;
   }

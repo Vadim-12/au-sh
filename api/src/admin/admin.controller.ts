@@ -11,8 +11,8 @@ export class AdminController {
     return this.adminService.getAllAdmins()
   }
 
-  @Post('/create')
+  @Post('create')
   createAdmin(@Body() adminDto: CreateAdminDto) {
-    return this.adminService.create(adminDto)
+    return this.adminService.createAdmin(adminDto)
   }
 }

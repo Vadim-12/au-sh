@@ -296,6 +296,7 @@ const Header = ()=>{
 
 
 
+
 const Footer = ()=>{
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
         children: [
@@ -307,6 +308,16 @@ const Footer = ()=>{
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                     className: "box",
                     children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                            href: "/admin",
+                            className: "admin-link",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                src: "/assets/icons/admin-icon.png",
+                                alt: "admin-panel-icon",
+                                width: 1000,
+                                height: 1000
+                            })
+                        }),
                         /*#__PURE__*/ jsx_runtime_.jsx("h2", {
                             children: "ДОСТАВКА ЭЛЕКТРОМОБИЛЕЙ С АУКЦИОНОВ ЯПОНИИ"
                         }),

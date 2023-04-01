@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import Admin from 'types/admin';
+import { Admin } from 'types/admin';
 import { AdminModel } from './admin.model';
 
 import { CreateAdminDto } from './dto/create-admin.dto'
@@ -9,7 +9,7 @@ import { CreateAdminDto } from './dto/create-admin.dto'
 export class AdminService {
 	constructor(@InjectModel(AdminModel) private adminRepository: typeof AdminModel) {}
 
-	async create(dto: CreateAdminDto): Promise<Admin> {
+	async createAdmin(dto: CreateAdminDto): Promise<Admin> {
 		const admin = await this.adminRepository.create(dto)
 		return admin
 	}

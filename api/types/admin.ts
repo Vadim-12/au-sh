@@ -1,6 +1,4 @@
-interface Admin {
+export interface Admin {
 	login: string
 	password: string
 }
-
-export default Admin

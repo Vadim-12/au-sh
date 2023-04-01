@@ -46,7 +46,7 @@ const Admin = () => {
 	function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
 		setPassword(e.target.value)
 	}
-	function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
+	function handleSubmitFormAuth(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault()
 		
 		const fAdmin = admins.find(admin => admin.login === login)
@@ -83,19 +83,18 @@ const Admin = () => {
 		setInputError('')
 	}
 
+	function handleSubmitFormCars(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault()
+	}
+
 	return (
 		<AdminLayout>
 			<div className="container">
 				<h1>Панель администратора</h1>
-					{admins.length}<br/>
-					Авторизован: {String(admin.isLoginned)}<br/>
-					Логин: {admin.login}<br/>
-					Пароль: {admin.password}
-
 				{
 						!admin.isLoginned
 					?
-						<form action="" className='auth-form' onSubmit={handleSubmitForm}>
+						<form action="" className='auth-form' onSubmit={handleSubmitFormAuth}>
 							<h2>Вход</h2>
 							<div className='auth-input'>
 								<div className="login-block">
@@ -110,7 +109,17 @@ const Admin = () => {
 							<button type='submit'>Войти</button>
 						</form>
 					:
-						<p>Вы успешно авторизовались!</p>
+						<>
+							<form action='' className='car-add-form' onSubmit={handleSubmitFormCars}>
+								<h2>Добавить авто</h2>
+								<div className=''>
+									<div className="block">
+										<label>Марка авто:</label>
+										<input type='text' />
+									</div>
+								</div>
+							</form>
+						</>
 				}
 				{
 					inputError && <div className='auth-error'>Ошибка входа: {inputError}</div>
