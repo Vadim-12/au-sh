@@ -1,19 +1,16 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { AdminController } from './admin/admin.controller';
 import { AdminModel } from './admin/admin.model';
 import { AdminModule } from './admin/admin.module';
-import { CarsController } from './cars/cars.controller';
 import { CarsModule } from './cars/cars.module';
-import { ModificationsController } from './modifications/modifications.controller';
 import { ModificationsModule } from './modifications/modifications.module';
 
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env'
+      envFilePath: `.${process.env.NODE_ENV}.env`
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
