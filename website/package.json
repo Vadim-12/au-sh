@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development next dev",
+    "dev": "cross-env NODE_ENV=development next dev",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
+    "start": "cross-env NODE_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@types/react-dom": "18.0.11",
     "@types/react-redux": "^7.1.25",
     "2gis-maps": "^3.7.3",
+    "dotenv": "^16.0.3",
     "jquery": "^3.6.4",
     "next": "13.2.3",
     "node-sass": "^7.0.3",
@@ -28,5 +29,8 @@
     "scss": "^0.2.4",
     "slick-slider": "^1.8.2",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
