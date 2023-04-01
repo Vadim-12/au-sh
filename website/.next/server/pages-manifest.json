@@ -2,5 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin": "pages/admin.js"
+  "/404": "pages/404.html",
+  "/about": "pages/about.html",
+  "/admin": "pages/admin.html",
+  "/cart": "pages/cart.html",
+  "/contacts": "pages/contacts.html",
+  "/": "pages/index.html",
+  "/partners": "pages/partners.html",
+  "/payment": "pages/payment.html",
+  "/select/[id]": "pages/select/[id].html",
+  "/select": "pages/select.html"
 }
