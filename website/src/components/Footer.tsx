@@ -8,9 +8,10 @@ const Footer = () => {
       <div className="block_border_line"></div>
       <div className="container">
         <div className="box">
-        <Link href='/admin' className='admin-link'>
-          <Image src='/assets/icons/admin-icon.png' alt='admin-panel-icon' width={1000} height={1000} />
-        </Link>
+          <Link href='/admin' className='admin-link'>
+            <Image src='/assets/icons/admin-icon.png' alt='admin-panel-icon' width={1000} height={1000} />
+            <span>Панель администратора</span>
+          </Link>
           <h2>ДОСТАВКА ЭЛЕКТРОМОБИЛЕЙ С АУКЦИОНОВ ЯПОНИИ</h2>
           <div className="block_border_line"></div>
           <div className="content">
