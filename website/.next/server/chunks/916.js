@@ -11,19 +11,15 @@ exports.modules = {
 /* harmony export */ });
 /* harmony import */ var _reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4335);
 /* harmony import */ var _reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _static__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7993);
-
 
 const adminApi = (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__.createApi)({
     reducerPath: "adminApi",
     baseQuery: (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__.fetchBaseQuery)({
-        baseUrl: _static__WEBPACK_IMPORTED_MODULE_1__/* .API_URL */ .T
+        baseUrl: "api.genise-tk.ru"
     }),
     endpoints: (builder)=>({
             getAllAdmins: builder.query({
-                query: ()=>({
-                        url: `${_static__WEBPACK_IMPORTED_MODULE_1__/* .API_URL */ .T}/admins`
-                    })
+                query: ()=>"admins"
             })
         })
 });
