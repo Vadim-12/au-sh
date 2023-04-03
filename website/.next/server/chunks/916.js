@@ -15,7 +15,7 @@ exports.modules = {
 const adminApi = (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__.createApi)({
     reducerPath: "adminApi",
     baseQuery: (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_0__.fetchBaseQuery)({
-        baseUrl: "api.genise-tk.ru"
+        baseUrl: "https://api.genise-tk.ru"
     }),
     endpoints: (builder)=>({
             getAllAdmins: builder.query({
