@@ -4,12 +4,14 @@ import { AdminState, IAdmin } from '@/types/admin'
 import React, { useEffect, useState } from 'react'
 import adminApi from '@/store/api/adminService'
 import { setAdminIsLoginned, setAdminLogin, setAdminPassword } from '@/store/slices/adminSlice'
+import { useRouter } from 'next/router'
 
 const Admin = () => {
 	const [login, setLogin] = useState('')
 	const [password, setPassword] = useState('')
 	const [inputError, setInputError] = useState('')
 	const [admins, setAdmins] = useState<IAdmin[]>([])
+	const router = useRouter()
 	
 	const dispatch = useAppDispatch()
 	let admin: AdminState = useAppSelector(state => state.admin)
@@ -21,7 +23,6 @@ const Admin = () => {
 	}, [data])
 
 	useEffect(() => {
-		
 		let adminFromLS = localStorage.getItem('admin')
 
 		if (adminFromLS) {
@@ -83,16 +84,32 @@ const Admin = () => {
 		setInputError('')
 	}
 
-	function handleSubmitFormCars(e: React.FormEvent<HTMLFormElement>) {
-		e.preventDefault()
+	function handleLogOut() {
+		localStorage.removeItem('admin')
+
+		dispatch(setAdminIsLoginned({
+			isLoginned: false
+		}))
+		/*
+		dispatch(setAdminLogin({
+			login: ''
+		}))
+		dispatch(setAdminPassword({
+			password: ''
+		}))
+		*/
+	}
+
+	function handleGoToWebsite() {
+		router.push('/')
 	}
 
 	return (
 		<AdminLayout>
 			<div className="container">
 				<h1>Панель администратора</h1>
-				{admins.length}
-				{
+				{admins.length}<br/>
+				админы: {
 					admins.map(({login, password}) => (
 						<div>{login} {password}</div>
 					))
@@ -116,15 +133,9 @@ const Admin = () => {
 						</form>
 					:
 						<>
-							<form action='' className='car-add-form' onSubmit={handleSubmitFormCars}>
-								<h2>Добавить авто</h2>
-								<div className=''>
-									<div className="block">
-										<label>Марка авто:</label>
-										<input type='text' />
-									</div>
-								</div>
-							</form>
+							<p>Вы успешно авторизовались!</p>
+							<button onClick={handleLogOut}>Выйти</button>
+							<button onClick={handleGoToWebsite}>Выйти</button>
 						</>
 				}
 				{
