@@ -41,7 +41,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AdminController.prototype, "createAdmin", null);
 AdminController = __decorate([
-    (0, common_1.Controller)('admin'),
+    (0, common_1.Controller)('admins'),
     __metadata("design:paramtypes", [admin_service_1.AdminService])
 ], AdminController);
 exports.AdminController = AdminController;

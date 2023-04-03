@@ -26,7 +26,7 @@ __decorate([
     __metadata("design:type", String)
 ], AdminModel.prototype, "password", void 0);
 AdminModel = __decorate([
-    (0, sequelize_typescript_1.Table)({ tableName: 'admin' })
+    (0, sequelize_typescript_1.Table)({ tableName: 'admins' })
 ], AdminModel);
 exports.AdminModel = AdminModel;
 //# sourceMappingURL=admin.model.js.map
