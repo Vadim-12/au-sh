@@ -8,7 +8,7 @@ const adminApi = createApi({
 	endpoints: (builder) => ({
 		getAllAdmins: builder.query<IAdmin[], null>({
 			query: () => ({
-				url: `${API_URL}/admin`
+				url: `${API_URL}/admins`
 			})
 		})
 	})
