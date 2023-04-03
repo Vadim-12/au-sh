@@ -4,7 +4,10 @@ const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
 async function bootstrap() {
     const PORT = Number(process.env.PORT) || 5000;
-    const app = await core_1.NestFactory.create(app_module_1.AppModule, { cors: true });
+    const app = await core_1.NestFactory.create(app_module_1.AppModule);
+    app.enableCors({
+        origin: 'https://genise-tk.ru'
+    });
     await app.listen(PORT);
 }
 bootstrap();
