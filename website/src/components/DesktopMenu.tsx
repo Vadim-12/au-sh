@@ -10,11 +10,11 @@ const DesktopMenu = () => {
     <nav className="menu-desktop">
       {
         menuLinks.map(link => (
-          link.inMenu && <Link href={link.href} className={'menu__link' + (link.id === pageId ? ' cur' : '')} /*onClick={handleChangePage(link.id)}*/ key={link.id}>{link.name}</Link>
+          link.inMenu && <Link href={link.href} className={'menu__link' + (link.id === pageId ? ' cur' : '')} key={link.id}>{link.name}</Link>
         ))
       }
     </nav>
-  );
-};
+  )
+}
 
-export default DesktopMenu;
+export default DesktopMenu
