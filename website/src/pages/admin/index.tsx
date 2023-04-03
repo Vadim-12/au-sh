@@ -92,6 +92,11 @@ const Admin = () => {
 			<div className="container">
 				<h1>Панель администратора</h1>
 				{
+					admins.map(({login, password}) => (
+						<div>{login} {password}</div>
+					))
+				}
+				{
 						!admin.isLoginned
 					?
 						<form action="" className='auth-form' onSubmit={handleSubmitFormAuth}>
