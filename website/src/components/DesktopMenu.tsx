@@ -3,7 +3,6 @@ import Link from "next/link";
 import { menuLinks } from "@/store/static";
 import { useAppSelector } from '@/hooks';
 
-
 const DesktopMenu = () => {
   const pageId = useAppSelector(state => state.curPage.curPageId)
   
