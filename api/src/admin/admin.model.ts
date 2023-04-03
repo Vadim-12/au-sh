@@ -5,7 +5,7 @@ interface AdminCreationAttrs {
   password: string;
 }
 
-@Table({tableName: 'admin'})
+@Table({tableName: 'admins'})
 export class AdminModel extends Model<AdminModel, AdminCreationAttrs> {
   @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
   id: number;
