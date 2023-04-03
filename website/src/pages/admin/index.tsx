@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import adminApi from '@/store/api/adminService'
 import { setAdminIsLoginned, setAdminLogin, setAdminPassword } from '@/store/slices/adminSlice'
 import { useRouter } from 'next/router'
-import { API_URL } from '@/store/static'
 
 const Admin = () => {
 	const [login, setLogin] = useState('')
@@ -109,8 +108,8 @@ const Admin = () => {
 		<AdminLayout>
 			<div className="container">
 				<h1>Панель администратора</h1>
-				API_URL: {API_URL}
-				{admins.length}<br/>
+				API_URL: {process.env.NEXT_PUBLIC_API_URL}<br/>
+				кол-во админов: {admins.length}<br/>
 				админы: {
 					admins.map(({login, password}) => (
 						<div>{login} {password}</div>
