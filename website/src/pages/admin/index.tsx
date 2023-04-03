@@ -91,6 +91,7 @@ const Admin = () => {
 		<AdminLayout>
 			<div className="container">
 				<h1>Панель администратора</h1>
+				{admins.length}
 				{
 					admins.map(({login, password}) => (
 						<div>{login} {password}</div>
