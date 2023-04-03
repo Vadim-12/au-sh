@@ -19,6 +19,7 @@ const Admin = () => {
 
 	useEffect(() => {
 		const admins = data?.length ? data : []
+		console.log(admins)
 		setAdmins(admins)
 	}, [data])
 
