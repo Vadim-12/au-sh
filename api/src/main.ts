@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const PORT = Number(process.env.PORT) || 5000
 
-  const app = await NestFactory.create(AppModule)
+  const app = await NestFactory.create(AppModule, {cors: false})
 
   app.enableCors({
     origin: 'https://genise-tk.ru'
